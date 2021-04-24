@@ -50,11 +50,11 @@ const ContactForm = (props) => {
       values.bloodgrp === "" ||
       values.mobile === ""
     )
-      alert("Please fill in all the fields.");
-      else (
-    setValues({ ...values, addedBy: user.email }),
-    props.addOrEdit(values))
-       };
+      return alert("Please fill in all the fields.");
+
+    setValues({ ...values, addedBy: user.email });
+    props.addOrEdit(values);
+  };
 
   const signInWithGoogle = () => {
     let provider = new firebase.auth.GoogleAuthProvider();
