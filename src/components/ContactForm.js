@@ -43,6 +43,15 @@ const ContactForm = (props) => {
       return;
     }
 
+    if (
+      values.fullName === "" ||
+      values.address === "" ||
+      values.age === "" ||
+      values.bloodgrp === "" ||
+      values.mobile === ""
+    )
+      alert("Please fill in all the fields.");
+
     setValues({ ...values, addedBy: user.email });
     props.addOrEdit(values);
   };
