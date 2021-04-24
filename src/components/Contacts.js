@@ -52,6 +52,7 @@ const Contacts = () => {
       </div>
 
       <div className="container-md">
+      <p class="para">Note : If women are uncomfortable sharing their numbers then it is advised please list a male relative's number.</p>
         <div className="mb-5">
           <ContactForm {...{ currentId, contactObjects, addOrEdit }} />
         </div>
