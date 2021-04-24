@@ -15,3 +15,8 @@ code {
 .footer-copyright {
   font-weight: bold;
 }
+
+.para{
+  padding-top: 2%;
+  padding-bottom: 3%;
+}
