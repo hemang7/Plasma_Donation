@@ -51,10 +51,10 @@ const ContactForm = (props) => {
       values.mobile === ""
     )
       alert("Please fill in all the fields.");
-
-    setValues({ ...values, addedBy: user.email });
-    props.addOrEdit(values);
-  };
+      else (
+    setValues({ ...values, addedBy: user.email }),
+    props.addOrEdit(values))
+       };
 
   const signInWithGoogle = () => {
     let provider = new firebase.auth.GoogleAuthProvider();
