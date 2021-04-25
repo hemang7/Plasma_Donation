@@ -52,6 +52,7 @@ const Contacts = () => {
       </div>
 
       <div className="container-md">
+      <p class="para">प्लाज्मा दान करने के लिए कृपया नीचे दिया गया फॉर्म भरें।</p>
       <p class="para">Note : If women are uncomfortable sharing their mobile numbers then it is advised to please list a male relative's number.</p>
         <div className="mb-5">
           <ContactForm {...{ currentId, contactObjects, addOrEdit }} />
