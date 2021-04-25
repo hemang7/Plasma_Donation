@@ -6,21 +6,25 @@ import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
 const ContactForm = (props) => {
   const [user, loading, error] = useAuthState(auth);
-  const initialFieldValues = {
+
+  const [values, setValues] = useState({
     fullName: "",
     age: "",
     bloodgrp: "",
     mobile: "",
     address: "",
     addedBy: user ? user.email : ""
-  };
-
-  const [values, setValues] = useState(initialFieldValues);
+  });
 
   useEffect(() => {
     if (props.currentId === "")
       setValues({
-        ...initialFieldValues
+        fullName: "",
+        age: "",
+        bloodgrp: "",
+        mobile: "",
+        address: "",
+        addedBy: user ? user.email : ""
       });
     else
       setValues({
@@ -51,9 +55,13 @@ const ContactForm = (props) => {
       values.mobile === ""
     )
       return alert("Please fill in all the fields.");
+    if (user.email) {
+      console.log("inside form", user);
 
-    setValues({ ...values, addedBy: user.email });
-    props.addOrEdit(values);
+      setValues({ ...values, addedBy: user.email });
+      console.log(values);
+      props.addOrEdit({ ...values, addedBy: user.email });
+    }
   };
 
   const signInWithGoogle = () => {
