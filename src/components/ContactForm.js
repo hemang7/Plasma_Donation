@@ -129,6 +129,7 @@ const ContactForm = (props) => {
           />
         </div>
       </div>
+      <p class="para2">Note : If women are uncomfortable sharing their mobile numbers then it is advised to please list a male relative's number.</p>
       <div className="form-group">
         <textarea
           className="form-control"
