@@ -95,6 +95,7 @@ const ContactForm = (props) => {
           <input
             className="form-control"
             placeholder="Age"
+            type="number"
             name="age"
             value={values.age}
             onChange={handleInputChange}
@@ -123,6 +124,7 @@ const ContactForm = (props) => {
           <input
             className="form-control"
             placeholder="Mobile no."
+            type="number"
             name="mobile"
             value={values.mobile}
             onChange={handleInputChange}
