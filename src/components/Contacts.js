@@ -52,8 +52,19 @@ const Contacts = () => {
       </div>
 
       <div className="container-md">
+      <p class="para">क्या आप PLASMA दान करने के लिए पात्र हैं?</p>
+      <p>इन बिंदुओं को देखें: </p>
+
+      <li> आपको पिछले 3 महीने के भीतर कोविड-19 के लिए नकारात्मक परीक्षण करना चाहिए।</li>
+      <li>आपको Diabities नहीं होना चाहिए।</li>
+      <li>आपकी आयु 65 वर्ष से कम होनी चाहिए।</li>
+      <li> आपको थायराइड नहीं होना चाहिए।</li>
+      <li>आपको high blood pressure नहीं होना चाहिए।</li>
+      <li> जो महिलाएं गर्भवती हैं वे दान करने के लिए योग्य नहीं हैं।</li>
+      <li>जिन महिलाओं ने गर्भ धारण किया है वे दान करने के योग्य नहीं हैं।</li>
+      
       <p class="para">प्लाज्मा दान करने के लिए कृपया नीचे दिया गया फॉर्म भरें।</p>
-      <p class="para">Note : If women are uncomfortable sharing their mobile numbers then it is advised to please list a male relative's number.</p>
+      
         <div className="mb-5">
           <ContactForm {...{ currentId, contactObjects, addOrEdit }} />
         </div>
