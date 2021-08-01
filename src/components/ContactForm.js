@@ -17,17 +17,9 @@ const ContactForm = (props) => {
   });
 
   useEffect(() => {
-    if (props.currentId === "")
-      setValues({
-        fullName: "",
-        age: "",
-        bloodgrp: "",
-        mobile: "",
-        address: "",
-        addedBy: user ? user.email : ""
-      });
-    else
-      setValues({
+    if (props.currentId !== "")
+      
+       setValues({
         ...props.contactObjects[props.currentId]
       });
   }, [props.currentId, props.contactObjects]);
